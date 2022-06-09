@@ -121,8 +121,14 @@ print("☺B → giocatore B\n_____________________________")
 print("- il giocatore che inizia la partita è scelto in modo casuale")
 mescolo=input("- le carte nei mazzi hanno un ordine di default, vuoi mescolarle? digita s/n → ")
 if mescolo == "s":
-    random.shuffle(Mazzo_giocatoreA)
-    random.shuffle(Mazzo_giocatoreB)
+    Mazzo_intero= Mazzo_giocatoreA + Mazzo_giocatoreB
+    random.shuffle(Mazzo_intero)
+    Mazzo_giocatoreA.clear()
+    Mazzo_giocatoreB.clear()
+    for i in range(0,20):
+        Mazzo_giocatoreA.append(Mazzo_intero[i])
+    for i in range(0,20):
+        Mazzo_giocatoreB.append(Mazzo_intero[i])
     ASSEGNATUTTO()
     PRINT_GAME()
 elif mescolo == "n":
