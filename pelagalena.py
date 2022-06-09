@@ -114,6 +114,10 @@ def CAMBIA_AZIONE():
     
 #1. INIZIO
 print("BENVENUTO AL SIMULATORE DI PARTITE POSSIBILI A PELA GALÈNA")
+print("_____________________________\n- legenda:")
+print("☺A → giocatore A")
+print("█ → tavola")
+print("☺B → giocatore B\n_____________________________")
 print("- il giocatore che inizia la partita è scelto in modo casuale")
 mescolo=input("- le carte nei mazzi hanno un ordine di default, vuoi mescolarle? digita s/n → ")
 if mescolo == "s":
